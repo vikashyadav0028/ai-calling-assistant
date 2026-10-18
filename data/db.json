@@ -1,0 +1,423 @@
+{
+  "calls": [
+    {
+      "id": "call_1792315589456",
+      "callerNumber": "+91 98123 45678",
+      "callerName": "Dr. Ramesh Sharma",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T09:26:29.460Z"
+    },
+    {
+      "id": "call_1792316764920",
+      "callerNumber": "919457886467",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T09:46:04.920Z"
+    },
+    {
+      "id": "call_1792317599636",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T09:59:59.637Z"
+    },
+    {
+      "id": "call_1792317812069",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T10:03:32.069Z"
+    },
+    {
+      "id": "call_1792317824164",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T10:03:44.165Z"
+    },
+    {
+      "id": "call_1792317901784",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T10:05:01.784Z"
+    },
+    {
+      "id": "call_1792318545917",
+      "callerNumber": " 917455910536",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T10:15:45.917Z"
+    },
+    {
+      "id": "call_1792319598925",
+      "callerNumber": "917455910536",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T10:33:18.927Z"
+    },
+    {
+      "id": "call_1792320905429",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Live Voice Test Caller",
+      "type": "incoming",
+      "status": "completed",
+      "timestamp": "2026-10-18T10:55:05.431Z"
+    },
+    {
+      "id": "call_1792321238587",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Live Voice Test Caller",
+      "type": "incoming",
+      "status": "completed",
+      "timestamp": "2026-10-18T11:00:38.587Z"
+    },
+    {
+      "id": "call_1792332878005",
+      "callerNumber": "919457886467",
+      "callerName": "Caller",
+      "type": "incoming",
+      "status": "missed",
+      "timestamp": "2026-10-18T14:14:38.008Z"
+    }
+  ],
+  "voicemails": [
+    {
+      "id": "vm_1792315634792",
+      "callerNumber": "+91 98123 45678",
+      "callerName": "Dr. Ramesh Sharma",
+      "transcript": "Hi Vikas, calling to confirm our meeting for tomorrow at 11 AM regarding the clinic software demo.",
+      "duration": "0:28",
+      "urgency": "Normal",
+      "summary": "Inquiry regarding bot setup",
+      "timestamp": "2026-10-18T09:27:14.792Z"
+    },
+    {
+      "id": "vm_1792320905432",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Live Voice Test Caller",
+      "transcript": "Caller: उससे बोलना मुझसे मिले।\nAssistant: Theek hai, maine note kar liya hai. Kya mai aapka shubh naam jaan sakti hoon taaki Vikas ko bata sakoon?\nCaller: रोहन।\nAssistant: Bahut shukriya रोहन। ji! Maine aapka message aur details note kar li hain. Vikas aapse jald hi call karke baat karenge. Have a great day!",
+      "duration": "00:46",
+      "urgency": "Normal",
+      "summary": "Live AI Voice Call completed",
+      "timestamp": "2026-10-18T10:55:05.432Z"
+    },
+    {
+      "id": "vm_1792321238587",
+      "callerNumber": "+91 9457886467",
+      "callerName": "Live Voice Test Caller",
+      "transcript": "Caller: विकास को मैसेज दे दो मुझसे मिले आके।\nAssistant: जी ठीक है, मैंने नोट कर लिया है। क्या मैं आपका शुभ नाम जान सकती हूँ ताकि Vikas को बता सकूँ?\nCaller: विशाल।\nAssistant: बहुत-बहुत धन्यवाद विशाल। जी! मैंने आपका मैसेज नोट कर लिया है। Vikas आपसे जल्द ही कॉल करके बात करेंगे। आपका दिन शुभ हो!",
+      "duration": "00:47",
+      "urgency": "Normal",
+      "summary": "Live AI Voice Call completed",
+      "timestamp": "2026-10-18T11:00:38.587Z"
+    }
+  ],
+  "messages": [
+    {
+      "id": "msg_1792315589461",
+      "from": "AI Assistant",
+      "to": "+91 98123 45678",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T09:26:29.461Z"
+    },
+    {
+      "id": "msg_1792315619051",
+      "from": "+91 98123 45678",
+      "to": "AI Assistant",
+      "direction": "inbound",
+      "text": "Yes Vikas, Dr. Sharma here. This is urgent, wanted to discuss the quotation today.",
+      "timestamp": "2026-10-18T09:26:59.052Z"
+    },
+    {
+      "id": "msg_1792315619057",
+      "from": "AI Assistant",
+      "to": "+91 98123 45678",
+      "direction": "outbound",
+      "text": "Got it! I have marked this as high priority for Vikas. He will call you back as soon as he is free. Please feel free to leave any other details here.",
+      "timestamp": "2026-10-18T09:26:59.056Z"
+    },
+    {
+      "id": "msg_1792316171338",
+      "from": "+120363163514333016",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "_बंगाल की दुर्गा पूजा 'अल्पना' के बिना अधूरी मानी जाती है। जी हां, चावल के घोल से उकेरे गए इसके हर डिजाइन में छिपा होता है एक गहरा संदेश। आइए, जानते हैं इस लोक कला के खास मायनों के बारे में।_ \n\n*पूरी खबर ➡️*\nhttps://www.jagran.com/lifestyle/lifestyle-news-why-durga-puja-is-incomplete-without-traditional-bengali-folk-art-alpana-each-design-conveys-a-special-message-40408945.html",
+      "timestamp": "2026-10-18T09:36:11.338Z"
+    },
+    {
+      "id": "msg_1792316171342",
+      "from": "AI Assistant",
+      "to": "+120363163514333016",
+      "direction": "outbound",
+      "text": "Thank you for the message. I've noted: \"_बंगाल की दुर्गा पूजा 'अल्पना' के बिना अधूरी मानी जाती है। जी हां, चावल के घोल से उकेरे गए इसके हर डिजाइन में छिपा होता है एक गहरा संदेश। आइए, जानते हैं इस लोक कला के खास मायनों के बारे में।_ \n\n*पूरी खबर ➡️*\nhttps://www.jagran.com/lifestyle/lifestyle-news-why-durga-puja-is-incomplete-without-traditional-bengali-folk-art-alpana-each-design-conveys-a-special-message-40408945.html\". I will notify Vikas directly so he can follow up with you shortly!",
+      "timestamp": "2026-10-18T09:36:11.341Z"
+    },
+    {
+      "id": "msg_1792316448528",
+      "from": "+235059265147066",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Hiii vikash",
+      "timestamp": "2026-10-18T09:40:48.528Z"
+    },
+    {
+      "id": "msg_1792316448531",
+      "from": "AI Assistant",
+      "to": "+235059265147066",
+      "direction": "outbound",
+      "text": "Hello! Thanks for reaching out. Vikas is currently unavailable. May I know your name and what this is regarding?",
+      "timestamp": "2026-10-18T09:40:48.530Z"
+    },
+    {
+      "id": "msg_1792316511596",
+      "from": "+235059265147066",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Hi",
+      "timestamp": "2026-10-18T09:41:51.596Z"
+    },
+    {
+      "id": "msg_1792316511600",
+      "from": "AI Assistant",
+      "to": "+235059265147066",
+      "direction": "outbound",
+      "text": "Hello! Thanks for reaching out. Vikas is currently unavailable. May I know your name and what this is regarding?",
+      "timestamp": "2026-10-18T09:41:51.599Z"
+    },
+    {
+      "id": "msg_1792316514365",
+      "from": "+235059265147066",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Hi",
+      "timestamp": "2026-10-18T09:41:54.365Z"
+    },
+    {
+      "id": "msg_1792316514368",
+      "from": "AI Assistant",
+      "to": "+235059265147066",
+      "direction": "outbound",
+      "text": "Hello! Thanks for reaching out. Vikas is currently unavailable. May I know your name and what this is regarding?",
+      "timestamp": "2026-10-18T09:41:54.367Z"
+    },
+    {
+      "id": "msg_1792316516046",
+      "from": "+235059265147066",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "H",
+      "timestamp": "2026-10-18T09:41:56.046Z"
+    },
+    {
+      "id": "msg_1792316516050",
+      "from": "AI Assistant",
+      "to": "+235059265147066",
+      "direction": "outbound",
+      "text": "Thank you for the message. I've noted: \"H\". I will notify Vikas directly so he can follow up with you shortly!",
+      "timestamp": "2026-10-18T09:41:56.049Z"
+    },
+    {
+      "id": "msg_1792316764920",
+      "from": "AI Assistant",
+      "to": "919457886467",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T09:46:04.920Z"
+    },
+    {
+      "id": "msg_1792317599638",
+      "from": "AI Assistant",
+      "to": "+91 9457886467",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T09:59:59.638Z"
+    },
+    {
+      "id": "msg_1792317812069",
+      "from": "AI Assistant",
+      "to": "+91 9457886467",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T10:03:32.069Z"
+    },
+    {
+      "id": "msg_1792317824165",
+      "from": "AI Assistant",
+      "to": "+91 9457886467",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T10:03:44.165Z"
+    },
+    {
+      "id": "msg_1792317901784",
+      "from": "AI Assistant",
+      "to": "+91 9457886467",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T10:05:01.784Z"
+    },
+    {
+      "id": "msg_1792318545918",
+      "from": "AI Assistant",
+      "to": " 917455910536",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T10:15:45.918Z"
+    },
+    {
+      "id": "msg_1792318576955",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Fuck off",
+      "timestamp": "2026-10-18T10:16:16.955Z"
+    },
+    {
+      "id": "msg_1792318576997",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Thanks for letting me know! I've noted your message and will notify Vikas right away.",
+      "timestamp": "2026-10-18T10:16:16.997Z"
+    },
+    {
+      "id": "msg_1792318587710",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Okay",
+      "timestamp": "2026-10-18T10:16:27.710Z"
+    },
+    {
+      "id": "msg_1792318587721",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Thanks for letting me know! I've noted your message and will notify Vikas right away.",
+      "timestamp": "2026-10-18T10:16:27.720Z"
+    },
+    {
+      "id": "msg_1792318622938",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Kuch ni",
+      "timestamp": "2026-10-18T10:17:02.938Z"
+    },
+    {
+      "id": "msg_1792318622944",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Thanks for letting me know! I've noted your message and will notify Vikas right away.",
+      "timestamp": "2026-10-18T10:17:02.943Z"
+    },
+    {
+      "id": "msg_1792318633284",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Hi",
+      "timestamp": "2026-10-18T10:17:13.284Z"
+    },
+    {
+      "id": "msg_1792318633291",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Hello! Thanks for reaching out. Vikas is currently occupied. What's on your mind?",
+      "timestamp": "2026-10-18T10:17:13.290Z"
+    },
+    {
+      "id": "msg_1792318647932",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Kuch ni tu",
+      "timestamp": "2026-10-18T10:17:27.932Z"
+    },
+    {
+      "id": "msg_1792318647938",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Got it, I've noted that down for Vikas. Anything else you'd like to add before he calls you back?",
+      "timestamp": "2026-10-18T10:17:27.938Z"
+    },
+    {
+      "id": "msg_1792319598930",
+      "from": "AI Assistant",
+      "to": "917455910536",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T10:33:18.930Z"
+    },
+    {
+      "id": "msg_1792319624278",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Yes give mey money back",
+      "timestamp": "2026-10-18T10:33:44.278Z"
+    },
+    {
+      "id": "msg_1792319624297",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Got it! I've noted that down for Vikas. He'll check this and follow up shortly.",
+      "timestamp": "2026-10-18T10:33:44.296Z"
+    },
+    {
+      "id": "msg_1792319630066",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Thanks",
+      "timestamp": "2026-10-18T10:33:50.066Z"
+    },
+    {
+      "id": "msg_1792319630073",
+      "from": "AI Assistant",
+      "to": "+8766229602341",
+      "direction": "outbound",
+      "text": "Got it! I've noted that down for Vikas. He'll check this and follow up shortly.",
+      "timestamp": "2026-10-18T10:33:50.072Z"
+    },
+    {
+      "id": "msg_1792319632667",
+      "from": "+8766229602341",
+      "to": "Vikas",
+      "direction": "inbound",
+      "text": "Ok",
+      "timestamp": "2026-10-18T10:33:52.667Z"
+    },
+    {
+      "id": "msg_1792332878009",
+      "from": "AI Assistant",
+      "to": "919457886467",
+      "direction": "outbound",
+      "text": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+      "timestamp": "2026-10-18T14:14:38.009Z"
+    }
+  ],
+  "settings": {
+    "ownerName": "Vikas",
+    "autoReplyText": "Hey! Vikas here. I couldn't take your call right now. Is there anything urgent? Reply here and let me know!",
+    "geminiApiKey": "",
+    "twilioAccountSid": "",
+    "twilioAuthToken": "",
+    "twilioPhoneNumber": "",
+    "twilioWhatsAppNumber": ""
+  }
+}

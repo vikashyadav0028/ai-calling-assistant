@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Call & WhatsApp Assistant - Founder Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="nav-left">
+      <div class="logo-icon">🤖</div>
+      <div>
+        <h1 class="nav-title"><span id="owner-name-display">Vikas</span>'s AI Assistant</h1>
+        <p class="nav-subtitle">24/7 Voice Calling & WhatsApp Auto-Responder (<span id="owner-phone-display">+91 9457886467</span>)</p>
+      </div>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-purple" onclick="startLiveVoiceCall()">🎙️ Start Live Voice Call</button>
+      <span id="wa-connection-pill" class="status-pill offline"><span class="pulse-dot"></span> WhatsApp: Disconnected</span>
+      <button class="btn btn-secondary" onclick="openSettingsModal()">⚙️ Settings</button>
+    </div>
+  </header>
+
+  <main class="dashboard-container">
+
+    <!-- Direct WhatsApp QR Connect Banner -->
+    <section id="wa-connect-banner" class="card qr-banner">
+      <div class="qr-content-left">
+        <div class="badge" style="width: fit-content; margin-bottom: 8px;">Direct Mobile Connection</div>
+        <h2>📲 Link Your Phone: +91 9457886467</h2>
+        <p class="card-desc" style="margin-bottom: 12px;">
+          Connect your actual WhatsApp to the AI in 10 seconds:
+        </p>
+        <ol class="qr-steps">
+          <li>Open <strong>WhatsApp</strong> on your phone (9457886467).</li>
+          <li>Tap <strong>Settings</strong> (or 3 dots on top right) → <strong>Linked Devices</strong>.</li>
+          <li>Tap <strong>Link a Device</strong> and point your camera at this QR code.</li>
+        </ol>
+        <p class="sim-hint" style="margin-top: 10px;">Once linked, any incoming message or missed call is automatically handled by your AI!</p>
+      </div>
+      <div class="qr-box" id="qr-container">
+        <div class="qr-loading">Generating secure QR code...</div>
+      </div>
+    </section>
+
+    <!-- KPI Metric Cards -->
+    <section class="metrics-grid">
+      <div class="metric-card">
+        <div class="metric-icon blue">📞</div>
+        <div>
+          <div class="metric-label">Total Calls</div>
+          <div class="metric-value" id="stat-total-calls">0</div>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon red">📵</div>
+        <div>
+          <div class="metric-label">Missed Calls Saved</div>
+          <div class="metric-value" id="stat-missed-calls">0</div>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon purple">🎙️</div>
+        <div>
+          <div class="metric-label">Voicemails Captured</div>
+          <div class="metric-value" id="stat-voicemails">0</div>
+        </div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-icon green">💬</div>
+        <div>
+          <div class="metric-label">WhatsApp Chats</div>
+          <div class="metric-value" id="stat-messages">0</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Workspace Split -->
+    <div class="workspace-grid">
+
+      <!-- Left Column: Interactive Live Simulator -->
+      <section class="card simulator-card">
+        <div class="card-header">
+          <h2>🧪 Live Test Simulator</h2>
+          <span class="badge">Test Live Right Now</span>
+        </div>
+        <p class="card-desc">Simulate what happens when someone calls your number and you don't pick up.</p>
+
+        <div class="simulator-box">
+          <label>Caller Phone Number</label>
+          <input type="text" id="sim-phone" class="input-field" value="+91 9457886467" placeholder="+91 ...">
+
+          <label>Caller Name</label>
+          <input type="text" id="sim-name" class="input-field" value="Dr. Ramesh Sharma" placeholder="Name">
+
+          <div class="sim-actions">
+            <button class="btn btn-primary" onclick="simulateMissedCall()">
+              📵 1. Simulate Missed Call
+            </button>
+            <p class="sim-hint">Simulates an unanswered call → triggers instant auto-WhatsApp message directly.</p>
+          </div>
+
+          <hr class="divider">
+
+          <label>Simulate Caller WhatsApp Reply</label>
+          <div class="input-group">
+            <input type="text" id="sim-msg" class="input-field" value="Yes Vikas, this is urgent. Wanted to know your quotation." placeholder="Type a message...">
+            <button class="btn btn-green" onclick="simulateIncomingWhatsApp()">Send</button>
+          </div>
+          <p class="sim-hint">AI reads this and responds intelligently on WhatsApp in seconds.</p>
+
+          <hr class="divider">
+
+          <label>Simulate Voicemail Recording</label>
+          <div class="input-group">
+            <input type="text" id="sim-voicemail" class="input-field" value="Hi Vikas, please call me back regarding clinic bot demo tomorrow morning." placeholder="Spoken message...">
+            <button class="btn btn-purple" onclick="simulateVoicemail()">Record</button>
+          </div>
+          <p class="sim-hint">Simulates caller speaking after beep → transcribes and flags urgency.</p>
+        </div>
+      </section>
+
+      <!-- Right Column: Tabs (Chats, Voicemails, Call Logs) -->
+      <section class="card content-card">
+        <div class="tab-header">
+          <button class="tab-btn active" onclick="switchTab('chats')">💬 WhatsApp Chats</button>
+          <button class="tab-btn" onclick="switchTab('voicemails')">🎙️ Voicemails</button>
+          <button class="tab-btn" onclick="switchTab('calls')">📋 Call History</button>
+        </div>
+
+        <!-- Tab 1: WhatsApp Chats -->
+        <div id="tab-chats" class="tab-pane active">
+          <div class="chat-container" id="chat-messages-list">
+            <div class="empty-state">No WhatsApp messages yet. Click "Simulate Missed Call" on the left to test!</div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Voicemails -->
+        <div id="tab-voicemails" class="tab-pane">
+          <div class="voicemail-list" id="voicemail-list">
+            <div class="empty-state">No voicemails yet. Click "Record" on the simulator to create a test voicemail.</div>
+          </div>
+        </div>
+
+        <!-- Tab 3: Call Logs -->
+        <div id="tab-calls" class="tab-pane">
+          <div class="table-container">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Caller</th>
+                  <th>Number</th>
+                  <th>Status</th>
+                  <th>Time</th>
+                </tr>
+              </thead>
+              <tbody id="calls-table-body">
+                <tr><td colspan="4" class="empty-cell">No calls recorded yet.</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- Settings Modal -->
+  <div id="settings-modal" class="modal-overlay hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>⚙️ Assistant Configuration</h2>
+        <button class="close-btn" onclick="closeSettingsModal()">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <label>Your Name</label>
+        <input type="text" id="setting-owner" class="input-field" placeholder="Vikas">
+
+        <label>Your Phone Number</label>
+        <input type="text" id="setting-phone" class="input-field" placeholder="9457886467">
+
+        <label>Instant Missed-Call WhatsApp Auto-Reply</label>
+        <textarea id="setting-autoreply" class="input-field textarea" rows="3"></textarea>
+
+        <label>Google Gemini API Key (Optional - enables advanced AI)</label>
+        <input type="password" id="setting-gemini" class="input-field" placeholder="AIzaSy...">
+        <small class="field-hint">Leave blank to use the smart built-in rule engine, or get a free key at <a href="https://aistudio.google.com" target="_blank">Google AI Studio</a>.</small>
+      </div>
+
+      <div class="modal-footer">
+        <button class="btn btn-secondary" onclick="closeSettingsModal()">Cancel</button>
+        <button class="btn btn-primary" onclick="saveSettings()">Save Configuration</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Live Voice Call Modal -->
+  <div id="voice-call-modal" class="modal-overlay hidden">
+    <div class="voice-call-card">
+      <div class="call-avatar-container">
+        <div class="pulse-ring ring-1"></div>
+        <div class="pulse-ring ring-2"></div>
+        <div class="call-avatar">🤖</div>
+      </div>
+      <h2 class="call-caller-title">Vikas's Voice Assistant</h2>
+      
+      <!-- Language Mode Switcher -->
+      <div class="lang-selector-group">
+        <button id="lang-btn-auto" class="lang-pill active" onclick="setCallLanguage('auto')">🔄 Auto</button>
+        <button id="lang-btn-hi" class="lang-pill" onclick="setCallLanguage('hi')">🇮🇳 हिन्दी (Pure Hindi)</button>
+        <button id="lang-btn-en" class="lang-pill" onclick="setCallLanguage('en')">🇬🇧 English</button>
+      </div>
+
+      <div id="call-status-indicator" class="call-status">Connecting call...</div>
+      <div id="call-timer" class="call-timer">00:00</div>
+
+      <div class="call-transcript-box" id="live-call-transcript">
+        <div class="transcript-line ai">AI: "Namaste! You have reached Vikas's assistant..."</div>
+      </div>
+
+      <div class="call-footer">
+        <button class="btn btn-red-circle" onclick="endLiveVoiceCall()" title="End Call">
+          📵 End Call
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
