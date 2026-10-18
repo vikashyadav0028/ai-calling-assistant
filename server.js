@@ -75,6 +75,8 @@ const SILENT_PHRASES = [
   'bye', 'by', 'gn', 'gm',
   'thik h', 'thik', 'theek hai', 'theek h', 'chal', 'chalo',
   'bolo', 'bol', 'sun',
+  'krta hu', 'karta hu', 'karti hu', 'krte h', 'karte hain', 'karunga', 'karungi',
+  'baad me', 'bad me', 'baad me krta hu', 'free hokar', 'free hoke', 'raat me',
   'fuck off', 'shut up', 'chup', 'chup kar', 'nikal', 'pagal'
 ];
 
@@ -233,6 +235,13 @@ const lastMissedCallTime = {};
 app.all(['/api/missed-call', '/api/simulate/missed-call'], async (req, res) => {
   let callerNumber = req.body?.callerNumber || req.query?.callerNumber || req.body?.from || '';
   const callerName = req.body?.callerName || req.query?.callerName || 'Caller';
+  const callType = req.body?.callType || req.query?.callType || '';
+
+  // CRITICAL FIX: If Vikas made an OUTGOING call to someone, DO NOT send auto-reply!
+  if (callType && (callType.toLowerCase().includes('out') || callType.toLowerCase() === 'outgoing')) {
+    console.log(`🚫 OUTGOING call to ${callerNumber} detected. Skipping auto-reply.`);
+    return res.json({ success: false, reason: 'Outgoing call ignored' });
+  }
 
   if (!callerNumber || callerNumber.includes('{call_number}')) {
     return res.status(400).json({ error: 'Invalid or missing caller number' });
