@@ -66,24 +66,20 @@ const humanActiveMap = {}; // phone -> timestamp
 const botReplyCount = {}; // phone -> count
 
 // Filler words / casual phrases that should NEVER trigger a bot reply
-const SILENT_PHRASES = [
-  'ok', 'okay', 'okk', 'k', 'kk',
-  'kuch ni', 'kuch nahi', 'kuch nhi', 'kuch na', 'kuch nai', 'nothing',
-  'hmm', 'hmmm', 'hm',
-  'haan', 'ha', 'hn', 'na', 'nahi', 'no', 'nope',
-  'thanks', 'thank you', 'thank u', 'thx', 'shukriya', 'dhanyawad', 'welcome',
-  'bye', 'by', 'gn', 'gm',
-  'thik h', 'thik', 'theek hai', 'theek h', 'chal', 'chalo',
-  'bolo', 'bol', 'sun',
-  'krta hu', 'karta hu', 'karti hu', 'krte h', 'karte hain', 'karunga', 'karungi',
-  'baad me', 'bad me', 'baad me krta hu', 'free hokar', 'free hoke', 'raat me',
-  'fuck off', 'shut up', 'chup', 'chup kar', 'nikal', 'pagal'
+const SILENT_PATTERNS = [
+  /^(ok|okay|okk|k|kk|thik|theek|hmm+|hm|haan|ha|hn|na|nahi|no|nope|bye|gn|gm|bolo|bol|sun|bass|bas)\b/i,
+  /\b(kuch ni|kuch nahi|kuch nhi|kuch na|kuch nai|nothing)\b/i,
+  /\b(thanks|thank you|thank u|thx|shukriya|dhanyawad|welcome)\b/i,
+  /\b(krta hu|karta hu|karti hu|krte h|karunga|karungi|krunga|call karta hu|call krta hu)\b/i,
+  /\b(baad me|bad me|free hoke|free hokar|free hokr|bahar hu|bahar hoon|busy hu|busy hoon|drive kar|driving|meeting me)\b/i,
+  /\b(chup|chup kar|nikal|pagal|fuck off|shut up)\b/i
 ];
 
 function isFillerWord(text) {
-  const cleaned = text.trim().toLowerCase().replace(/[^\w\s]/gi, '');
+  if (!text) return true;
+  const cleaned = text.trim().toLowerCase();
   if (cleaned.length <= 1) return true; // Single characters like "h", "a"
-  return SILENT_PHRASES.some(phrase => cleaned === phrase || cleaned.startsWith(phrase + ' '));
+  return SILENT_PATTERNS.some(regex => regex.test(cleaned));
 }
 
 async function generateAIResponse(senderPhone, userMessage) {
